@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DiceController : MonoBehaviour
+public class DiceController3 : MonoBehaviour
 {
     private Vector3 offset;
     private float zCoord;
