@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{13CA236F-D298-16F1-BA75-75558A36D002}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DiceController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DiceController3.cs">
     <Files>
       <File FileName="Assets/MouseDragController.cs" Line="69" Column="1" />
-      <File FileName="Assets/Scripts/CubeInteractionController.cs" Line="176" Column="30" />
-      <File FileName="Assets/Scripts/DiceController.cs" Line="110" Column="1" />
+      <File FileName="Assets/Scripts/CubeInteractionController.cs" />
       <File FileName="Assets/Scripts/DiceFloat.cs" />
+      <File FileName="Assets/Scripts/DiceController3.cs" Line="86" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6622663c-8f45-4387-a9f4-99252c679246" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e2d655d5-faab-411a-b0b8-75b1f435bc37" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
