@@ -1,4 +1,5 @@
 using UnityEngine;
+using FMODUnity;
 
 public class DiceController3 : MonoBehaviour
 {
@@ -6,7 +7,7 @@ public class DiceController3 : MonoBehaviour
     private float zCoord;
     private Rigidbody rb;
 
-    // These multipliers let you adjust the strength of the torque and force from the inspector.
+    // These multipliers let you adjust the strength of the torque and force.
     public float torqueMultiplier = 0.1f;
     public float forceMultiplier = 0.05f;
 
@@ -16,6 +17,11 @@ public class DiceController3 : MonoBehaviour
     // Assign a Cube Collider (or any Collider) in the Inspector that defines your boundaries.
     public Collider boundaryCollider;
 
+    // FMOD Event References (assign these in the Inspector)
+    [SerializeField] private EventReference fmodEventAtClick;
+    [SerializeField] private EventReference fmodEventAtGround;
+    [SerializeField] private EventReference fmodEventAtBorder;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -23,6 +29,26 @@ public class DiceController3 : MonoBehaviour
 
     void OnMouseDown()
     {
+        // Raycast from the camera through the mouse pointer to determine which face was clicked.
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform == transform)
+            {
+                // Convert hit normal (world space) into local space.
+                Vector3 localNormal = transform.InverseTransformDirection(hit.normal);
+                string face = DetermineFace(localNormal);
+                int diceSide = GetDiceSideFromFace(face);
+
+                // Trigger FMOD click event and set parameter "DiceSides" to the corresponding value.
+                var clickInstance = RuntimeManager.CreateInstance(fmodEventAtClick);
+                clickInstance.setParameterByName("DiceSides", diceSide);
+                clickInstance.start();
+                clickInstance.release();
+            }
+        }
+
         // Determine the z distance to the camera for correct screen-to-world conversion.
         zCoord = Camera.main.WorldToScreenPoint(transform.position).z;
         offset = transform.position - GetMouseWorldPos();
@@ -69,12 +95,55 @@ public class DiceController3 : MonoBehaviour
         Vector3 currentMousePosition = Input.mousePosition;
         Vector3 mouseDelta = currentMousePosition - lastMousePosition;
 
-        // Calculate a torque vector using mouseDelta, with adjustable multiplier.
+        // Calculate a torque vector using mouseDelta.
         Vector3 torque = new Vector3(mouseDelta.y, -mouseDelta.x, 0) * torqueMultiplier;
         rb.AddTorque(torque, ForceMode.Impulse);
 
         // Optional: Apply a slight linear force in the direction of the mouse movement.
         Vector3 force = new Vector3(mouseDelta.x, mouseDelta.y, 0) * forceMultiplier;
         rb.AddForce(force, ForceMode.Impulse);
+    }
+
+    // Determines which face of the dice was clicked based on the local normal vector.
+    private string DetermineFace(Vector3 localNormal)
+    {
+        float absX = Mathf.Abs(localNormal.x);
+        float absY = Mathf.Abs(localNormal.y);
+        float absZ = Mathf.Abs(localNormal.z);
+
+        if (absX > absY && absX > absZ)
+            return localNormal.x > 0 ? "Right" : "Left";
+        else if (absY > absZ)
+            return localNormal.y > 0 ? "Top" : "Bottom";
+        else
+            return localNormal.z > 0 ? "Front" : "Back";
+    }
+
+    // Maps the face string to a dice side number (1–6) for the FMOD parameter "DiceSides".
+    private int GetDiceSideFromFace(string face)
+    {
+        switch (face)
+        {
+            case "Top": return 6;
+            case "Bottom": return 1;
+            case "Left": return 4;
+            case "Right": return 3;
+            case "Front": return 2;
+            case "Back": return 5;
+            default: return 0;
+        }
+    }
+
+    // Trigger FMOD events on collision with objects tagged "Ground" or "Boundary".
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            RuntimeManager.PlayOneShot(fmodEventAtGround, transform.position);
+        }
+        if (collision.gameObject.CompareTag("Boundary"))
+        {
+            RuntimeManager.PlayOneShot(fmodEventAtBorder, transform.position);
+        }
     }
 }
