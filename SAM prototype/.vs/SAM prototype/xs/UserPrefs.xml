@@ -4,16 +4,12 @@
       <File FileName="Assets/MouseDragController.cs" Line="69" Column="1" />
       <File FileName="Assets/Scripts/CubeInteractionController.cs" />
       <File FileName="Assets/Scripts/DiceFloat.cs" />
-      <File FileName="Assets/Scripts/DiceController3.cs" Line="2" Column="17" />
+      <File FileName="Assets/Scripts/DiceController3.cs" Line="150" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SAM prototype" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
-              <Node name="Scripts" expanded="True" />
-            </Node>
-          </Node>
+          <Node name="SAM prototype" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
