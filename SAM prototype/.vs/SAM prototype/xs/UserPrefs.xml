@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{13CA236F-D298-16F1-BA75-75558A36D002}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PickUpScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FaceDetector.cs">
     <Files>
       <File FileName="Assets/Scripts/DiceRoll.cs" Line="53" Column="1" />
       <File FileName="Assets/Scripts/PickUpScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FaceDetector.cs" Line="17" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">

@@ -65,6 +65,7 @@
     <Compile Include="Assets/MouseDragController.cs" />
     <Compile Include="Assets/Scripts/DiceController3.cs" />
     <Compile Include="Assets/Scripts/PickUpScript.cs" />
+    <Compile Include="Assets/Scripts/FaceDetector.cs" />
     <Compile Include="Assets/Scripts/DiceRoll.cs" />
   </ItemGroup>
   <ItemGroup>
