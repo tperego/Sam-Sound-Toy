@@ -11,8 +11,8 @@ public class DiceController3 : MonoBehaviour
     public float torqueMultiplier = 0.1f;
     public float forceMultiplier = 0.05f;
 
-    // This will hold the mouse position at the time of clicking.
-    private Vector3 lastMousePosition;
+    // This will hold the mouse position in world space at the time of clicking.
+    private Vector3 lastMouseWorldPosition;
 
     // Assign a Cube Collider (or any Collider) in the Inspector that defines your boundaries.
     public Collider boundaryCollider;
@@ -56,8 +56,8 @@ public class DiceController3 : MonoBehaviour
         // Make the dice kinematic so it can be directly moved without physics interference.
         rb.isKinematic = true;
 
-        // Store the mouse position for calculating movement delta on release.
-        lastMousePosition = Input.mousePosition;
+        // Store the mouse's world space position for calculating movement delta on release.
+        lastMouseWorldPosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zCoord));
     }
 
     // Converts the current mouse position into world coordinates.
@@ -91,16 +91,16 @@ public class DiceController3 : MonoBehaviour
         // Re-enable physics.
         rb.isKinematic = false;
 
-        // Calculate the mouse movement delta.
-        Vector3 currentMousePosition = Input.mousePosition;
-        Vector3 mouseDelta = currentMousePosition - lastMousePosition;
+        // Convert current mouse position to world space.
+        Vector3 currentMouseWorldPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, zCoord));
+        Vector3 worldDelta = currentMouseWorldPos - lastMouseWorldPosition;
 
-        // Calculate a torque vector using mouseDelta.
-        Vector3 torque = new Vector3(mouseDelta.y, -mouseDelta.x, 0) * torqueMultiplier;
+        // Calculate a torque vector using the world-space delta.
+        Vector3 torque = new Vector3(worldDelta.y, -worldDelta.x, 0) * torqueMultiplier;
         rb.AddTorque(torque, ForceMode.Impulse);
 
-        // Optional: Apply a slight linear force in the direction of the mouse movement.
-        Vector3 force = new Vector3(mouseDelta.x, mouseDelta.y, 0) * forceMultiplier;
+        // Apply a linear force based on the world-space movement.
+        Vector3 force = worldDelta * forceMultiplier;
         rb.AddForce(force, ForceMode.Impulse);
     }
 

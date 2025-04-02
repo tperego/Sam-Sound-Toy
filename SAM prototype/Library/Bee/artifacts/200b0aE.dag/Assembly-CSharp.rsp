@@ -361,6 +361,7 @@
 "Assets/Scripts/CubeInteractionController.cs"
 "Assets/Scripts/DiceController3.cs"
 "Assets/Scripts/DiceFloat.cs"
+"Assets/Scripts/DiceRoll.cs"
 "Assets/Scripts/PickUpScript.cs"
 -langversion:9.0
 
