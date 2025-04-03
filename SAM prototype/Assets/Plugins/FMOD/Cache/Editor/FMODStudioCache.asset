@@ -163,7 +163,7 @@ MonoBehaviour:
   - {fileID: 8185279201476922180}
   StringsBanks:
   - {fileID: 5535500205473153163}
-  cacheTime: 638792818520808435
+  cacheTime: 638793012340788669
   cacheVersion: 131623
 --- !u!114 &4121515681705606338
 MonoBehaviour:
@@ -232,14 +232,14 @@ MonoBehaviour:
     Data4: 1043876507
   Banks:
   - {fileID: 8008209916806194587}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters:
   - {fileID: -7459776834266663066}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 12791
 --- !u!114 &8008209916806194587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,10 +255,10 @@ MonoBehaviour:
   Path: FMOD/Roll Music/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638792818520808435
+  lastModified: 638793012340788669
   FileSizes:
   - Name: Desktop
-    Value: 115552
+    Value: 753504
   Exists: 1
 --- !u!114 &8185279201476922180
 MonoBehaviour:
