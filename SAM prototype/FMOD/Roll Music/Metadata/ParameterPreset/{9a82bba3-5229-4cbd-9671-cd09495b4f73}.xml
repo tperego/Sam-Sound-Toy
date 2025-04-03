@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{9a82bba3-5229-4cbd-9671-cd09495b4f73}">
+		<property name="name">
+			<value>DiceRoll</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d2ac1533-6c6f-42bd-a459-96204c070395}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9514fb5c-5b32-436e-a7b4-0578ca1855cb}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9514fb5c-5b32-436e-a7b4-0578ca1855cb}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>6</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Side1</value>
+			<value>Side2</value>
+			<value>Side3</value>
+			<value>Side4</value>
+			<value>Side5</value>
+			<value>Side6</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

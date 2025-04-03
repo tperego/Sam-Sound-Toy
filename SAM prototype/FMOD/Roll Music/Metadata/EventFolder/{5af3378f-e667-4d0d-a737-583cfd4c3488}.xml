@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{5af3378f-e667-4d0d-a737-583cfd4c3488}">
+		<property name="name">
+			<value>Wall Bounce</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7afb30dc-e973-4be2-b020-4e8e8b73f3a6}</destination>
+		</relationship>
+	</object>
+</objects>
