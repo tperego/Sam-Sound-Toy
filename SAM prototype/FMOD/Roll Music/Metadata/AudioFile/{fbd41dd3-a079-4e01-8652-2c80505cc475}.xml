@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{fbd41dd3-a079-4e01-8652-2c80505cc475}">
+		<property name="assetPath">
+			<value>Roll6.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>10.833333333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a036ab68-7c81-400b-b8e9-996a9654f8db}</destination>
+		</relationship>
+	</object>
+</objects>

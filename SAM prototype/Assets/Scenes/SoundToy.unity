@@ -281,6 +281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 341254273}
   - component: {fileID: 341254274}
+  - component: {fileID: 341254275}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -324,6 +325,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.43
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &341254275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341254272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Ground
+  Parameter: DiceRoll
+  TriggerEvent: 3
+  Value: 0
 --- !u!1 &408390189
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 408390190}
   - component: {fileID: 408390191}
+  - component: {fileID: 408390192}
   m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
@@ -377,6 +395,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.43
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &408390192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408390189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Ground
+  Parameter: DiceRoll
+  TriggerEvent: 3
+  Value: 1
 --- !u!1001 &617797439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -521,6 +555,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891943560}
   - component: {fileID: 891943561}
+  - component: {fileID: 891943562}
   m_Layer: 0
   m_Name: 5
   m_TagString: Untagged
@@ -564,6 +599,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.43
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &891943562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891943559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Ground
+  Parameter: DiceRoll
+  TriggerEvent: 3
+  Value: 4
 --- !u!1 &915039978
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +772,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1135105109}
   - component: {fileID: 1135105110}
+  - component: {fileID: 1135105111}
   m_Layer: 0
   m_Name: 4
   m_TagString: Untagged
@@ -764,6 +816,117 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.43
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1135105111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135105108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Ground
+  Parameter: DiceRoll
+  TriggerEvent: 3
+  Value: 3
+--- !u!1 &1248578231
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1248578233}
+  - component: {fileID: 1248578232}
+  - component: {fileID: 1248578234}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1248578232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248578231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -178366634
+      Data2: 1199478697
+      Data3: -119894863
+      Data4: -282195648
+    Path: event:/Music/BackGround
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1248578233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248578231}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.368, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1248578234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248578231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 793509360
+      Data2: 1198248457
+      Data3: 1333959351
+      Data4: 1043876507
+    Path: event:/Music/Roll (Event)
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1257628057
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +937,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1257628058}
   - component: {fileID: 1257628059}
+  - component: {fileID: 1257628060}
   m_Layer: 0
   m_Name: 6
   m_TagString: Untagged
@@ -817,6 +981,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.43
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1257628060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257628057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Ground
+  Parameter: DiceRoll
+  TriggerEvent: 3
+  Value: 5
 --- !u!1 &1284172765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,6 +1545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2110477605}
   - component: {fileID: 2110477606}
+  - component: {fileID: 2110477607}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -1408,6 +1589,22 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.43
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2110477607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110477604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Ground
+  Parameter: DiceRoll
+  TriggerEvent: 3
+  Value: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1418,3 +1615,4 @@ SceneRoots:
   - {fileID: 1284172769}
   - {fileID: 1638533576}
   - {fileID: 2034751647}
+  - {fileID: 1248578233}
