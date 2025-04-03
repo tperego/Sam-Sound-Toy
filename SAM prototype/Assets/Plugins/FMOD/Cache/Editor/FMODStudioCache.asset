@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7459776834266663066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Roll (Event)/DiceRoll
+  m_EditorClassIdentifier: 
+  Name: DiceRoll
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 3097491101
+    data2: 1244768945
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Side1
+  - Side2
+  - Side3
+  - Side4
+  - Side5
+  - Side6
+  Exists: 1
 --- !u!114 &-6441907191099926417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,6 +57,36 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3372815438031551866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DiceRoll
+  m_EditorClassIdentifier: 
+  Name: DiceRoll
+  StudioPath: parameter:/DiceRoll
+  Min: 0
+  Max: 5
+  Default: 0
+  ID:
+    data1: 3097491101
+    data2: 1244768945
+  Type: 2
+  IsGlobal: 1
+  Labels:
+  - Side1
+  - Side2
+  - Side3
+  - Side4
+  - Side5
+  - Side6
+  Exists: 1
 --- !u!114 &-2916989544205591356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,11 +102,38 @@ MonoBehaviour:
   Path: FMOD/Roll Music/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638792754006300234
+  lastModified: 638792814928556833
   FileSizes:
   - Name: Desktop
     Value: 199680
   Exists: 1
+--- !u!114 &-2072675272667339151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/BackGround
+  m_EditorClassIdentifier: 
+  Path: event:/Music/BackGround
+  Guid:
+    Data1: -178366634
+    Data2: 1199478697
+    Data3: -119894863
+    Data4: -282195648
+  Banks:
+  - {fileID: 8008209916806194587}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13333
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,15 +150,20 @@ MonoBehaviour:
   - {fileID: 5535500205473153163}
   - {fileID: 8185279201476922180}
   - {fileID: -2916989544205591356}
+  - {fileID: 8008209916806194587}
   EditorEvents:
   - {fileID: 4121515681705606338}
   - {fileID: -6441907191099926417}
-  EditorParameters: []
+  - {fileID: -2072675272667339151}
+  - {fileID: 8663712132709715571}
+  - {fileID: 7823730893173964717}
+  EditorParameters:
+  - {fileID: -3372815438031551866}
   MasterBanks:
   - {fileID: 8185279201476922180}
   StringsBanks:
   - {fileID: 5535500205473153163}
-  cacheTime: 638792754006300234
+  cacheTime: 638793012340788669
   cacheVersion: 131623
 --- !u!114 &4121515681705606338
 MonoBehaviour:
@@ -115,10 +207,58 @@ MonoBehaviour:
   Path: FMOD/Roll Music/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638792754002736341
+  lastModified: 638792818520322830
   FileSizes:
   - Name: Desktop
-    Value: 888
+    Value: 1134
+  Exists: 1
+--- !u!114 &7823730893173964717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Roll (Event)
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Roll (Event)
+  Guid:
+    Data1: 793509360
+    Data2: 1198248457
+    Data3: 1333959351
+    Data4: 1043876507
+  Banks:
+  - {fileID: 8008209916806194587}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7459776834266663066}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12791
+--- !u!114 &8008209916806194587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/Roll Music/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638793012340788669
+  FileSizes:
+  - Name: Desktop
+    Value: 753504
   Exists: 1
 --- !u!114 &8185279201476922180
 MonoBehaviour:
@@ -135,8 +275,35 @@ MonoBehaviour:
   Path: FMOD/Roll Music/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638792754002634776
+  lastModified: 638792818520276860
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1274
   Exists: 1
+--- !u!114 &8663712132709715571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Touch
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Touch
+  Guid:
+    Data1: -1346621749
+    Data2: 1311129287
+    Data3: -354622044
+    Data4: 1551839452
+  Banks:
+  - {fileID: 8008209916806194587}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
