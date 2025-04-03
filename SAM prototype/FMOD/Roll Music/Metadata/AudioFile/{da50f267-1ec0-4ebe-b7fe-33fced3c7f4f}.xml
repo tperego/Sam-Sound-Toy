@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{da50f267-1ec0-4ebe-b7fe-33fced3c7f4f}">
+		<property name="assetPath">
+			<value>Freeze Touch Sound [2025-04-03 080036].wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.3333333333333335</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a036ab68-7c81-400b-b8e9-996a9654f8db}</destination>
+		</relationship>
+	</object>
+</objects>
