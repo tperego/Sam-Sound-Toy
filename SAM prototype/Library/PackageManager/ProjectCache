@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638783663660000000
+      ticks: 638792312290000000
     m_Hash: 2881977363
   m_LockFileStatus:
     m_FilePath: /Volumes/YelloXTreem/sam github/Sam-Sound-Toy/SAM prototype/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638783663660000000
+      ticks: 638792312290000000
     m_Hash: 879404939
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -2949,9 +2949,11 @@ m_ResolvedPackages:
     - 2.0.20
     - 2.0.21
     - 2.0.22
+    - 2.0.23
     compatible:
     - 2.0.22
-    recommended: 2.0.22
+    - 2.0.23
+    recommended: 2.0.23
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -3582,8 +3584,10 @@ m_ResolvedPackages:
     - 1.0.3
     - 2.0.0
     - 2.0.1
+    - 2.1.0
     compatible:
     - 2.0.1
+    - 2.1.0
     recommended: 2.0.1
     deprecated: []
   dependencies: []
